@@ -5,7 +5,7 @@ Create a command-line application that dynamically generates a README.md from a 
 ```sh
 node index.js
 ```
-
+![](project-working.gif)
 The user will be prompted for their GitHub username and other information pertaining to the project the README is for.
 
 The README will be populated with the following:
