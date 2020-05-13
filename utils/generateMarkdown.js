@@ -30,9 +30,10 @@ function generateMarkdown(data) {
   # **Questions** 
   If you have any questions feel free to contact me at ${data.email} or at my github below.
   
-  # **Username**  
+  # **Username** 
+  Created by 
   ${data.username}
-  ![Github Username avatar](${data.avatar_url})
+  ![Github Username avatar]( ${data.avatar_url})
 `;
 }
 
