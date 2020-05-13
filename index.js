@@ -1,43 +1,88 @@
-const fs = require("fs");
-const util = require("util");
-const inquirer = require("inquirer");
-const writeFileAsync = util.promisify(fs.writeFile);
-// const readFileAsync = util.promisify(fs.readFile);
-function promptUser() {
-  return inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What is your name?",
-    },
-    { type: "input", name: "location", message: "Where are you from?" },
-    { type: "number", name: "age", message: "How old are you?" },
-    { type: "input", name: "github", message: "Enter your Github UserName" },
-  ]);
+var inquirer = require("inquirer");
+var fs = require("fs");
+const path = require("path");
+const api = require("./utils/api");
+const generateMarkdown = require("./utils/generateMarkdown");
+const questions = [
+  {
+    type: "input",
+    name: "name",
+    message: "What is your name?",
+  },
+  {
+    type: "input",
+    name: "username",
+    message: "What is your github Username?",
+  },
+
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email?",
+  },
+
+  {
+    type: "input",
+    name: "title",
+    message: "What is title of this Project?",
+  },
+
+  {
+    type: "input",
+    name: "usage",
+    message: "What is the use of this Project?",
+  },
+  {
+    type: "input",
+    name: "license",
+    message: "What is the license used for on this Project?",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Write a brief description of this Project.",
+  },
+  {
+    type: "input",
+    name: "installation",
+    message: "Write some installation requirements if any.",
+  },
+  {
+    type: "input",
+    name: "contributers",
+    message: "Any other contributers? If so write their usernames here.",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "How do you test it?",
+  },
+];
+
+// function writeToFile(questions, data) {
+//   questions = [{ type: "input", name: "name", message: "What is your name?" }];
+// }
+function writeTheFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
-function generateHTML(answers) {
-  return `<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>${answers.name}'s Personal Page</title>
-    </head>
-    <body>
-    <h1>Welcome ${answers.name}!</h1>
-    <p> It is my understanding that you are ${answers.age} years old and that you are from ${answers.location} </p>
-        
-    </body>
-    </html>`;
-}
-promptUser()
-  .then((answers) => {
-    const html = generateHTML(answers);
-    return writeFileAsync("index.html", html);
-  })
-  .then(() => {
-    console.log("successfully wrote ato index.html");
-  })
-  .catch((err) => {
-    console.error(err);
+// inquirer.prompt(prompts).ui.process.subscribe(onEachAnswer, onError, onComplete);
+function init() {
+  inquirer.prompt(questions).then((answers) => {
+    api.getUser(answers.username).then(({ data }) => {
+      writeTheFile(
+        "README.md",
+        generateMarkdown({ ...answers, ...JSON.stringify(data) })
+      );
+    });
   });
+}
+
+init();
+
+// .catch((error) => {
+//   if (error.isTtyError) {
+//     // Prompt couldn't be rendered in the current environment
+//   } else {
+//     // Something else when wrong
+//   }
+// });
