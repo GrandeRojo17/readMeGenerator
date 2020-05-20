@@ -1,6 +1,3 @@
-var d = new Date();
-console.log(d);
-
 function printTime() {
   var d = new Date();
   var hours = d.getHours();
@@ -8,21 +5,17 @@ function printTime() {
   var secs = d.getSeconds();
   if (hours > 12) {
     var newnew = hours - 12;
-    return console.log(
-      "The current time is: " + newnew + ":" + mins + ":" + secs
-    );
+    // return console.log(
+    //   "The current time is: " + newnew + ":" + mins + ":" + secs
+    return `${newnew} + ${mins} + ${secs}`;
   } else {
-    return console.log(
-      "The current time is: " + hours + ":" + mins + ":" + secs
-    );
+    return `${hours} + ${mins} + ${secs}`;
   }
-  console.log("something");
 }
-var currentDate = d;
+var currentDate = printTime();
 
 function generateMarkdown(data) {
-  return;
-  ` # **${data.title}** 
+  return ` # **${data.title}** 
   by ${data.name} a.k.a ${data.username} on ${currentDate}
   ![Licenses](https://img.shields.io/badge/license-${data.license}-blue.svg)
    
