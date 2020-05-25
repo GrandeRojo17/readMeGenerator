@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
 const util = require("util");
@@ -9,12 +9,6 @@ const writeFileAsync = util.promisify(fs.writeFile);
 // const readFileAsync = util.promisify(fs.readFile);
 
 const questions = [
-  {
-    type: "input",
-    name: "name",
-    message: `What is your name?`,
-  },
-
   {
     type: "input",
     name: "username",
@@ -35,8 +29,14 @@ const questions = [
 
   {
     type: "input",
+    name: "usage",
+    message: `What is your use case for this app?`,
+  },
+
+  {
+    type: "input",
     name: "description",
-    message: `What is a short discription of the project?`,
+    message: `Write a short discription of the project.`,
   },
 
   {
@@ -47,8 +47,23 @@ const questions = [
 
   {
     type: "input",
-    name: "usage",
-    message: "What are the use cases?",
+    name: "installation",
+    message: "Install instructions?",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: `What are some quick install tips?`,
+  },
+  {
+    type: "input",
+    name: "name",
+    message: `What is your name?`,
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: `Any other contributers?`,
   },
 ];
 
@@ -81,12 +96,10 @@ function writeToFile(fileName, data) {
 //     console.error(err);
 //   });
 function init() {
-  inquirer.prompt(questions).then((inquirerResponse) => {
-    api.getUser(inquirerResponse.username).then(({ data }) => {
-      writeToFile(
-        "README.md",
-        generateMarkdown({ ...inquirerResponse, ...data })
-      );
+  inquirer.prompt(questions).then((answers) => {
+    api.getUser(answers.username).then(({ data }) => {
+      console.log(data);
+      writeToFile("README.md", generateMarkdown({ ...answers, ...data }));
       console.log("It works");
     });
   });

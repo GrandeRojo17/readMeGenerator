@@ -1,6 +1,6 @@
 function generateMarkdown(data) {
   return `
-# PROJECT: ${data.title}
+# **PROJECT**: **${data.title}**
 ## By: ${data.name} @ ${data.email} @GHUB: ${data.github}
 
 #### Description: <p>${data.description}</p>
@@ -20,7 +20,7 @@ function generateMarkdown(data) {
 <h4>Installation </h4>
 To install necessary dependencies, run the following command:
 
-${data.installationInfo}
+${data.installation}
 <h4>Usage</h4>
 
 ${data.usage}
@@ -32,13 +32,16 @@ ${data.license}
 ${data.contributing}
 
 <h4>Tests</h4>
+#1 Clone this repo and make sure the links match up the files.
+#2 Run Node [fileName].js and follow the prompt.
 
-To run tests you need to clone the material and then run the file name through the terminal.
 <h3>Questions</h3>
 
-![Alt text](./DavidLogo_01.png "My personality")
+![Licenses](https://img.shields.io/badge/license-${data.license}-blue.svg)
+
 - (What questions should we be asking?)
-if you have any questions about the repo, open an issue or contact 
+If you have any questions about the repo, open an issue or contact 
+![Github Username avatar](${data.avatar_url})
 ![${data.email}] (mailto:david.yennerell@gmail.com ${data.email} "personal Email")] directly. Send any ideas my way.
 `;
 }

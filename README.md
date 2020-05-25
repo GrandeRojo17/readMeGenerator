@@ -1,9 +1,9 @@
 
-# PROJECT: The Biggest Project Of Them All
-## By: null @ null @GHUB: undefined
+# **PROJECT**: **Professional Note Taker**
+## By: David Y @GHUB: granderojo17
 
-#### Description: <p>This was a fun project that I am still going to work on to generate myself a readMe file to save me time.</p>
-#License : MIT
+#### Description: <p>Take notes on the fly and come back to a passing thought a few years back. Organize your data and share it in any format.</p>
+#License : mit
 
 <h2>Table of Contents</h2>
 
@@ -19,23 +19,26 @@
 <h4>Installation </h4>
 To install necessary dependencies, run the following command:
 
-undefined
+After placing all folders into their correct places, using Node open the js file and run the program. Follow the prompts and watch for the new file.
 <h4>Usage</h4>
 
-All of the use cases
+Store and organize notes while creating a clean format design.
 <h4>License</h4>
 
-MIT
+mit
 <h4>Contributing</h4>
 
-undefined
+No Contributions.
 
 <h4>Tests</h4>
+#1 Clone this repo and make sure the links match up the files.
+#2 Run Node [fileName].js and follow the prompt.
 
-To run tests you need to clone the material and then run the file name through the terminal.
 <h3>Questions</h3>
 
-![Alt text](./DavidLogo_01.png "My personality")
+![Licenses](https://img.shields.io/badge/license-mit-blue.svg)
+
 - (What questions should we be asking?)
-if you have any questions about the repo, open an issue or contact 
+If you have any questions about the repo, open an issue or contact 
+![Github Username avatar](https://avatars3.githubusercontent.com/u/38540605?v=4)
 ![null] (mailto:david.yennerell@gmail.com null "personal Email")] directly. Send any ideas my way.
