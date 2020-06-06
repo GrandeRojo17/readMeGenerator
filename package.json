@@ -10,7 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+<<<<<<< HEAD
     "dotenv": "^8.2.0",
+=======
+    "dotenv": "^8.0.0",
+>>>>>>> ac6cae1bd14c14a4587eb275a9fc3f56cba35310
     "inquirer": "^6.5.2"
   }
 }

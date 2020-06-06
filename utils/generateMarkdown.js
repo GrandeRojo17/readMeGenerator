@@ -1,48 +1,55 @@
+function printTime() {
+  var d = new Date();
+  var hours = d.getHours();
+  var mins = d.getMinutes();
+  var secs = d.getSeconds();
+  if (hours > 12) {
+    var newnew = hours - 12;
+    // return console.log(
+    //   "The current time is: " + newnew + ":" + mins + ":" + secs
+    return `${newnew} + ${mins} + ${secs}`;
+  } else {
+    return `${hours} + ${mins} + ${secs}`;
+  }
+}
+var currentDate = printTime();
+
 function generateMarkdown(data) {
-  return `
-# **PROJECT**: **${data.title}**
-## By: ${data.name} @ ${data.email} @GHUB: ${data.github}
-
-#### Description: <p>${data.description}</p>
-#License : ${data.license}
-
-<h2>Table of Contents</h2>
-
-*[Installation]('#installation')
-* Usage
-
-* License
-* Contributing
-* Tests
-* Questions
-
-
-<h4>Installation </h4>
-To install necessary dependencies, run the following command:
-
-${data.installation}
-<h4>Usage</h4>
-
-${data.usage}
-<h4>License</h4>
-
-${data.license}
-<h4>Contributing</h4>
-
-${data.contributing}
-
-<h4>Tests</h4>
-#1 Clone this repo and make sure the links match up the files.
-#2 Run Node [fileName].js and follow the prompt.
-
-<h3>Questions</h3>
-
-![Licenses](https://img.shields.io/badge/license-${data.license}-blue.svg)
-
-- (What questions should we be asking?)
-If you have any questions about the repo, open an issue or contact 
-![Github Username avatar](${data.avatar_url})
-![${data.email}] (mailto:david.yennerell@gmail.com ${data.email} "personal Email")] directly. Send any ideas my way.
+  return ` # **${data.title}** 
+  by ${data.name} a.k.a ${data.username} on ${currentDate}
+  ![Licenses](https://img.shields.io/badge/license-${data.license}-blue.svg)
+   
+  ## **Description** 
+   
+  ${data.description}
+  ## ***Table of Contents***
+    * Installation
+    * Usage
+    * License
+    * Contributing
+    * Tests
+    * Questions
+  # **Installation**
+   
+  ### To install necessary dependencies, run the following command:
+   ${data.installation}
+  # **Usage**
+  ${data.usage}
+  # **License**
+  ${data.license}
+  ### This project is licensed under the ${data.license} license.
+  # **Contributing** 
+   ${data.contributers}
+  # **Tests**  
+  ### To run tests, run the following command:
+  ${data.tests}
+  # **Questions** 
+  If you have any questions feel free to contact me at ${data.email} or at my github below.
+  
+  # **Username** 
+  Created by 
+  ${data.username}
+  ![Github Username avatar]( ${data.avatar_url})
 `;
 }
 
