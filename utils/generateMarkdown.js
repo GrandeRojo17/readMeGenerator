@@ -15,21 +15,25 @@ function printTime() {
 var currentDate = printTime();
 
 function generateMarkdown(data) {
+
   return ` # **${data.title}** 
-  by ${data.name} a.k.a ${data.username} on ${currentDate}
+  by ${data.myName} a.k.a ${data.username} on ${currentDate}
   ![Licenses](https://img.shields.io/badge/license-${data.license}-blue.svg)
    
   ## **Description** 
    
   ${data.description}
   ## ***Table of Contents***
-    * Installation
-    * Usage
-    * License
-    * Contributing
-    * Tests
-    * Questions
-  # **Installation**
+    * [Installation](#Installation)
+    * [Usage](#Usage)
+    * [License](#License)
+    * [Contributing](#contributing)
+    * [Tests](#Tests)
+    * [Questions](#Questions)
+  
+  
+  
+    ## Installation
    
   ### To install necessary dependencies, run the following command:
    ${data.installation}
@@ -39,9 +43,12 @@ function generateMarkdown(data) {
   ${data.license}
   ### This project is licensed under the ${data.license} license.
   # **Contributing** 
-   ${data.contributers}
+   ${data.contributing}
   # **Tests**  
   ### To run tests, run the following command:
+  \`\`\`
+npm i
+\`\`\`
   ${data.tests}
   # **Questions** 
   If you have any questions feel free to contact me at ${data.email} or at my github below.
@@ -49,8 +56,8 @@ function generateMarkdown(data) {
   # **Username** 
   Created by 
   ${data.username}
-  ![Github Username avatar]( ${data.avatar_url})
-`;
+
+  ![Github Username avatar]( ${data.avatar_url})`;
 }
 
 module.exports = generateMarkdown;
