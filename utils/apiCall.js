@@ -1,13 +1,4 @@
-//`https://api.github.com/users/${username}`
 
-// const questions = [];
-
-// function writeToFile(fileName, data) {}
-
-// function init() {}
-
-// init();
-// module.exports("");
 const axios = require("axios");
 
 const api = {

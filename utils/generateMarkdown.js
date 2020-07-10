@@ -24,16 +24,13 @@ function generateMarkdown(data) {
    
   ${data.description}
   ## ***Table of Contents***
-    * [Installation](#Installation)
-    * [Usage](#Usage)
-    * [License](#License)
-    * [Contributing](#contributing)
-    * [Tests](#Tests)
-    * [Questions](#Questions)
+
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Questions](#questions)
   
-  
-  
-    ## Installation
+  ## Installation
    
   ### To install necessary dependencies, run the following command:
    ${data.installation}
@@ -46,10 +43,10 @@ function generateMarkdown(data) {
    ${data.contributing}
   # **Tests**  
   ### To run tests, run the following command:
+  ${data.tests}
   \`\`\`
 npm i
 \`\`\`
-  ${data.tests}
   # **Questions** 
   If you have any questions feel free to contact me at ${data.email} or at my github below.
   

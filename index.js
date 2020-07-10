@@ -72,17 +72,6 @@ function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// promptUser()
-//   .then((answers) => {
-//     const html = generateHTML(answers);
-//     return writeFileAsync("index.html", html);
-//   })
-//   .then(() => {
-//     console.log("successfully wrote to index.html");
-//   })
-//   .catch((err) => {
-//     console.error(err);
-//   });
 function init() {
   inquirer.prompt(questions).then((answers) => {
     api.getUser(answers.username).then(({ data }) => {

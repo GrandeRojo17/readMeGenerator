@@ -1,42 +1,42 @@
- # **ReadMe Generator** 
-  by David Yennerell a.k.a Granderojo17 on 11 + 1 + 21
+ # **The Burger** 
+  by David a.k.a GrandeRojo17 on 10 + 37 + 52
   ![Licenses](https://img.shields.io/badge/license-MIT-blue.svg)
    
   ## **Description** 
    
-  all of the descriptions
+  This project uses the website to manipulate and build a sandwhich
   ## ***Table of Contents***
-    * [Installation](#Installation)
-    * [Usage](#Usage)
-    * [License](#License)
-    * [Contributing](#contributing)
-    * [Tests](#Tests)
-    * [Questions](#Questions)
+  ## Table of Contents
+
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Questions](#questions)
+
   
   
-  
-    ## Installation
+  ## Installation
    
   ### To install necessary dependencies, run the following command:
-   None other than
+   Click the link to enjoy.
   # **Usage**
-  Alll of the use cases
+  Using it to learn about MVC applications
   # **License**
   MIT
   ### This project is licensed under the MIT license.
   # **Contributing** 
-   none at the moment
+   No active contributers
   # **Tests**  
   ### To run tests, run the following command:
   ```
 npm i
 ```
-  just do it
+  Would recommend learning how to use the chrome browser
   # **Questions** 
   If you have any questions feel free to contact me at null or at my github below.
   
   # **Username** 
   Created by 
-  Granderojo17
+  GrandeRojo17
 
   ![Github Username avatar]( https://avatars3.githubusercontent.com/u/38540605?v=4)
