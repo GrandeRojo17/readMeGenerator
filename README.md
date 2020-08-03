@@ -1,42 +1,39 @@
- # **The Burger** 
-  by David a.k.a GrandeRojo17 on 10 + 37 + 52
-  ![Licenses](https://img.shields.io/badge/license-MIT-blue.svg)
+ # **Fitness Tracker App** 
+  by David Yennerell a.k.a granderojo17 on 08/03/2020
+  ![Licenses](https://img.shields.io/badge/license-mit-blue.svg)
    
   ## **Description** 
    
-  This project uses the website to manipulate and build a sandwhich
+  Monitor you workouts much faster with this fitness app. Included is a "Workout Dashboard" that will help you visualize your workout routine.
   ## ***Table of Contents***
-  ## Table of Contents
 
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
   * [Questions](#questions)
-
-  
   
   ## Installation
    
   ### To install necessary dependencies, run the following command:
-   Click the link to enjoy.
+   https://fitnesstracker00001.herokuapp.com/ and click "Continue Workout" and then fill in your workout
   # **Usage**
-  Using it to learn about MVC applications
+  In just a few easy steps you can track and monitor your workout schedule.
   # **License**
-  MIT
-  ### This project is licensed under the MIT license.
+  mit
+  ### This project is licensed under the mit license.
   # **Contributing** 
-   No active contributers
+   none
   # **Tests**  
   ### To run tests, run the following command:
+  follow the link or otherwise haave a local database nearby.
   ```
 npm i
 ```
-  Would recommend learning how to use the chrome browser
   # **Questions** 
   If you have any questions feel free to contact me at null or at my github below.
   
   # **Username** 
   Created by 
-  GrandeRojo17
+  granderojo17
 
   ![Github Username avatar]( https://avatars3.githubusercontent.com/u/38540605?v=4)
